@@ -1,10 +1,12 @@
 import { React } from 'react';
+import styled from 'styled-components';
+import { Basic } from '../styles';
 
 const FaqSection = () => {
   return (
-    <div>
+    <Faq>
       <h2>
-        Frequently Asked <span>Questions</span>
+        Frequently Asked<span>Questions</span>
       </h2>
       <div className='question'>
         <h4>Why did you get into programming?</h4>
@@ -19,6 +21,7 @@ const FaqSection = () => {
             I went online and found FreeCodeCamp and the rest is history.
           </p>
         </div>
+        <div className='faq-line'></div>
       </div>
       <div className='question'>
         <h4>How did you teach yourself to code?</h4>
@@ -32,6 +35,7 @@ const FaqSection = () => {
             how to learn and I went from there.
           </p>
         </div>
+        <div className='faq-line'></div>
       </div>
       <div className='question'>
         <h4>What's the roadmap you recommed for new programmers?</h4>
@@ -41,6 +45,7 @@ const FaqSection = () => {
             Node w/ Express and MongoDB, React.
           </p>
         </div>
+        <div className='faq-line'></div>
       </div>
       <div className='question'>
         <h4>What do you plan on learning next?</h4>
@@ -52,9 +57,37 @@ const FaqSection = () => {
             thing since I can have a one-track mind.
           </p>
         </div>
+        <div className='faq-line'></div>
       </div>
-    </div>
+    </Faq>
   );
 };
+
+const Faq = styled(Basic)`
+  display: block;
+  span {
+    display: block;
+  }
+  h2 {
+    font-weight: lighter;
+    padding-bottom: 2rem;
+  }
+  .faq-line {
+    background: white;
+    height: 0.2rem;
+    margin: 2rem 0rem;
+    width: 100% auto;
+  }
+  .question {
+    padding: 3rem 0rem;
+    cursor: pointer;
+  }
+  .answer {
+    padding: 2rem 0rem;
+    p {
+      padding: 1rem 0rem;
+    }
+  }
+`;
 
 export default FaqSection;

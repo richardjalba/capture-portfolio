@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+// font-family: 'Mukta', sans-serif;
+// font-family: 'Righteous', cursive;
+
 const GlobalStyle = createGlobalStyle`
 
     * {
@@ -10,12 +13,13 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         background: rgb(40,45,62);
-
+        font-family: 'Mukta', sans-serif
     }
 
     button {
         font-weight: bold;
         font-size: 1.1rem;
+        font-family: 'Mukta', sans-serif;
         cursor: pointer;
         padding: 1rem 2rem;
         border: 3px solid #23d997;
@@ -38,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
         }
     h4{
             font-weight: bold;
+            font-size: 2rem;
         }
 
         a {

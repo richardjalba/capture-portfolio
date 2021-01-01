@@ -1,61 +1,85 @@
 import { React } from 'react';
 import home2 from '../img/home2.jpg';
+import { Basic, Description, Hide, Image, Icon } from '../styles';
+import styled from 'styled-components';
 
 const SkillsSection = () => {
   return (
-    <div className='skills'>
-      <div className='description'>
+    <Skills>
+      <Description>
         <h2>
           My <span>Skill</span> Stack
         </h2>
-        <div className='cards'>
-          <div className='card'>
-            <div className='icon'>
+        <Cards>
+          <Card>
+            <Icon>
               <img
-                src='https://png.pngitem.com/pimgs/s/206-2069813_file-css-and-html-css-logo-svg-hd.png'
+                src='https://www.flaticon.com/svg/static/icons/svg/921/921594.svg'
                 alt='html css logos'
               />
               <h3>HTML/CSS</h3>
-            </div>
+            </Icon>
             <p>The markdown languages.</p>
-          </div>
-          <div className='card'>
-            <div className='icon'>
+          </Card>
+          <Card>
+            <Icon>
               <img
-                src='https://mpng.subpng.com/20190627/ttx/kisspng-javascript-computer-icons-scalable-vector-graphics-list-of-javascript-enhancements-fandom-developers-5d145895b06253.7824611015616144857225.jpg'
+                src='https://www.flaticon.com/svg/static/icons/svg/919/919828.svg'
                 alt='javascript logo'
               />
               <h3>JavaScript</h3>
-            </div>
+            </Icon>
             <p>The gift that keeps on giving.</p>
-          </div>
-          <div className='card'>
-            <div className='icon'>
+          </Card>
+          <Card>
+            <Icon>
               <img
-                src='https://www.vhv.rs/dpng/d/456-4564693_vector-javascript-node-js-transparent-png-clipart-node.png'
+                src='https://www.flaticon.com/svg/static/icons/svg/919/919825.svg'
                 alt='node logo'
               />
               <h3>Node</h3>
-            </div>
+            </Icon>
             <p>The server side run-time.</p>
-          </div>
-          <div className='card'>
-            <div className='icon'>
+          </Card>
+          <Card>
+            <Icon>
               <img
                 src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png'
                 alt='react logo'
               />
               <h3>React</h3>
-            </div>
+            </Icon>
             <p>The framework that made this.</p>
-          </div>
-        </div>
-      </div>
-      <div className='image'>
-        <img src={home2} />
-      </div>
-    </div>
+          </Card>
+        </Cards>
+      </Description>
+      <Image>
+        <img src={home2} alt='pastry' />
+      </Image>
+    </Skills>
   );
 };
+
+const Skills = styled(Basic)`
+  h2 {
+    padding-bottom: 5rem;
+  }
+  p {
+    width: 70%;
+    padding: 2rem 0rem 4rem 0rem;
+  }
+`;
+
+const Cards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+const Card = styled.div`
+  align-items: center;
+  h3 {
+    margin-top: 1rem;
+    color: lightblue;
+  }
+`;
 
 export default SkillsSection;
