@@ -34,7 +34,8 @@ const GlobalStyle = createGlobalStyle`
 
     h2{
             font-weight:lighter;
-            font-size: 4rem
+            font-size: 4rem;
+            line-height: 1.15;
         }
         
     h3{
