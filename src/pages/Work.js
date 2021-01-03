@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom';
 // img
 import work1 from '../img/work1.png';
 import work2 from '../img/work2.png';
+// Animation
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 
 const Work = () => {
   return (
-    <StyledWork>
+    <StyledWork
+      variants={pageAnimation}
+      initial='hidden'
+      animate='show'
+      exit='exit'
+    >
       <h1>Developer Work History</h1>
 
       <Movie>
@@ -31,7 +39,7 @@ const Work = () => {
   );
 };
 
-const StyledWork = styled.div`
+const StyledWork = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
