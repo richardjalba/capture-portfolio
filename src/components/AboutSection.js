@@ -2,6 +2,8 @@ import { React } from 'react';
 import home1 from '../img/home1.jpg';
 import { Basic, Description, Hide, Image } from '../styles';
 import { motion } from 'framer-motion';
+import { titleAnim, fade, photoAnim } from '../animation';
+import Wave from './Wave';
 
 const AboutSection = () => {
   const container = {
@@ -20,6 +22,7 @@ const AboutSection = () => {
         >
           <Hide>
             <motion.h2
+              variants={titleAnim}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { duration: 1 } }}
             >
@@ -28,6 +31,7 @@ const AboutSection = () => {
           </Hide>
           <Hide>
             <motion.h2
+              variants={titleAnim}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { duration: 2 } }}
             >
@@ -36,6 +40,7 @@ const AboutSection = () => {
           </Hide>
           <Hide>
             <motion.h2
+              variants={titleAnim}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { duration: 2 } }}
             >
@@ -43,12 +48,15 @@ const AboutSection = () => {
             </motion.h2>
           </Hide>
         </motion.div>
-        <p>This project shows some of my react skills!</p>
-        <button>View my Portfolio</button>
+        <motion.p variants={fade}>
+          This project shows some of my react skills!
+        </motion.p>
+        <motion.button variants={fade}>View my Portfolio</motion.button>
       </Description>
       <Image>
-        <img src={home1} alt='fancy pastry' />
+        <motion.img variants={photoAnim} src={home1} alt='fancy pastry' />
       </Image>
+      <Wave />
     </Basic>
   );
 };
