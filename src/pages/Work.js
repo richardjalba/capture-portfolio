@@ -6,7 +6,13 @@ import work1 from '../img/work1.png';
 import work2 from '../img/work2.png';
 // Animation
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../animation';
+import {
+  sliderContainer,
+  slider,
+  pageAnimation,
+  fade,
+  photoAnim,
+} from '../animation';
 
 const Work = () => {
   return (
@@ -16,25 +22,50 @@ const Work = () => {
       animate='show'
       exit='exit'
     >
-      <h1>Developer Work History</h1>
+      <motion.div variants={sliderContainer}>
+        <Frame1 variants={slider}></Frame1>
+        <Frame2 variants={slider}></Frame2>
+        <Frame3 variants={slider}></Frame3>
+        <Frame4 variants={slider}></Frame4>
 
-      <Movie>
-        <h2>Front End Web Developer</h2>
-        <h3>H2 Marketing Consultants</h3>
-        <div className='line'></div>
-        <Link to='/work/work-1'>
-          <img src={work1} alt='H2 Marketing Consultants' />
-        </Link>
-      </Movie>
+        <motion.h1 variants={fade} style={{ color: 'white' }}>
+          Developer Work History
+        </motion.h1>
 
-      <Movie>
-        <h2>Unity VR/AR Developer</h2>
-        <h3>Cinnamon Roll Studios</h3>
-        <div className='line'></div>
-        <Link to='/work/work-2'>
-          <img src={work2} alt='H2 Marketing Consultants' />
-        </Link>
-      </Movie>
+        <Movie>
+          <motion.h2 variants={fade} style={{ color: 'rgb(13, 213, 252)' }}>
+            Front End Web Developer
+          </motion.h2>
+          <motion.h3 variants={fade} style={{ color: 'white' }}>
+            H2 Marketing Consultants
+          </motion.h3>
+          <motion.div className='line'></motion.div>
+          <Link to='/work/work-1'>
+            <motion.img
+              variants={photoAnim}
+              src={work1}
+              alt='H2 Marketing Consultants'
+            />
+          </Link>
+        </Movie>
+
+        <Movie>
+          <motion.h2 variants={fade} style={{ color: 'rgb(13, 213, 252)' }}>
+            Unity VR/AR Developer
+          </motion.h2>
+          <motion.h3 variants={fade} style={{ color: 'white' }}>
+            Cinnamon Roll Studios
+          </motion.h3>
+          <motion.div className='line'></motion.div>
+          <Link to='/work/work-2'>
+            <motion.img
+              variants={photoAnim}
+              src={work2}
+              alt='H2 Marketing Consultants'
+            />
+          </Link>
+        </Movie>
+      </motion.div>
     </StyledWork>
   );
 };
@@ -60,6 +91,26 @@ const Movie = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+`;
+
+// Frame Animation Effect
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  z-index: 2;
+`;
+const Frame2 = styled(Frame1)`
+  background: #ff8e8e;
+`;
+const Frame3 = styled(Frame1)`
+  background: #8ed2ff;
+`;
+const Frame4 = styled(Frame1)`
+  background: #8effa0;
 `;
 
 export default Work;
