@@ -21,7 +21,7 @@ const Contact = () => {
 
       <div>
         <Hide>
-          <Social variants='titleAnim'>
+          <Social variants={titleAnim}>
             <Circle />
             <a href='https://www.linkedin.com/in/richardjalba/'>
               <h2>LinkedIn Page</h2>
@@ -30,7 +30,7 @@ const Contact = () => {
         </Hide>
 
         <Hide>
-          <Social variants='titleAnim'>
+          <Social variants={titleAnim}>
             <Circle />
             <a href='https://richardalba.com/richardalba/#/contact'>
               <h2>Official Contact Form</h2>
@@ -46,18 +46,25 @@ const ContactStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: white;
   min-height: 90vh;
+  @media (max-width: 1500px) {
+    font-size: 1rem;
+    padding: 2rem;
+  }
 `;
 
 const Title = styled.div`
   margin-bottom: 4rem;
   color: white;
+  @media (max-width: 1500px) {
+    margin-top: 5rem;
+  }
 `;
 
 const Hide = styled.div`
   overflow: hidden;
 `;
 
-const Social = styled.div`
+const Social = styled(motion.div)`
   display: flex;
   align-items: center;
   h2 {
@@ -70,7 +77,7 @@ const Circle = styled.div`
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  background: #171727;
+  background: #23d997;
   a {
     margin: 2rem;
   }

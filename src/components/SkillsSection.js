@@ -75,6 +75,9 @@ const Skills = styled(Basic)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 const Card = styled.div`
   align-items: center;
