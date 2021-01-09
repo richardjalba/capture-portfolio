@@ -2,6 +2,8 @@ import { React } from 'react';
 import home2 from '../img/home2.jpg';
 import { Basic, Description, Hide, Image, Icon } from '../styles';
 import styled from 'styled-components';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 
 const SkillsSection = () => {
   return (

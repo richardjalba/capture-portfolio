@@ -11,6 +11,12 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box
     }
 
+    html {
+        @media (max-width: 1300px){
+            font-size: 75%
+        }
+    }
+
     body {
         background: rgb(40,45,62);
         font-family: 'Mukta', sans-serif
@@ -37,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
             font-size: 4rem;
             line-height: 1.15;
         }
+
         
     h3{
             color: white
@@ -47,7 +54,12 @@ const GlobalStyle = createGlobalStyle`
         }
 
         a {
-            font-size: 1.1rem
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: white
+        }
+        a:hover {
+            color: #ffd699
         }
         
     span{

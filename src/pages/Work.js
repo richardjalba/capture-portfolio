@@ -12,6 +12,7 @@ import {
   pageAnimation,
   fade,
   photoAnim,
+  line,
 } from '../animation';
 
 const Work = () => {
@@ -32,14 +33,14 @@ const Work = () => {
           Developer Work History
         </motion.h1>
 
-        <Movie>
+        <Segment>
           <motion.h2 variants={fade} style={{ color: 'rgb(13, 213, 252)' }}>
             Front End Web Developer
           </motion.h2>
           <motion.h3 variants={fade} style={{ color: 'white' }}>
             H2 Marketing Consultants
           </motion.h3>
-          <motion.div className='line'></motion.div>
+          <motion.div className='line' variants={line}></motion.div>
           <Link to='/work/work-1'>
             <motion.img
               variants={photoAnim}
@@ -47,16 +48,16 @@ const Work = () => {
               alt='H2 Marketing Consultants'
             />
           </Link>
-        </Movie>
+        </Segment>
 
-        <Movie>
+        <Segment>
           <motion.h2 variants={fade} style={{ color: 'rgb(13, 213, 252)' }}>
             Unity VR/AR Developer
           </motion.h2>
           <motion.h3 variants={fade} style={{ color: 'white' }}>
             Cinnamon Roll Studios
           </motion.h3>
-          <motion.div className='line'></motion.div>
+          <motion.div className='line' variants={line}></motion.div>
           <Link to='/work/work-2'>
             <motion.img
               variants={photoAnim}
@@ -64,7 +65,7 @@ const Work = () => {
               alt='H2 Marketing Consultants'
             />
           </Link>
-        </Movie>
+        </Segment>
       </motion.div>
     </StyledWork>
   );
@@ -79,7 +80,7 @@ const StyledWork = styled(motion.div)`
   }
 `;
 
-const Movie = styled.div`
+const Segment = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;

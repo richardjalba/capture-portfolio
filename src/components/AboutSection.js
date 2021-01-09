@@ -1,4 +1,5 @@
 import { React } from 'react';
+import { Link } from 'react-router-dom';
 import home1 from '../img/home1.jpg';
 import { Basic, Description, Hide, Image } from '../styles';
 import { motion } from 'framer-motion';
@@ -35,10 +36,10 @@ const AboutSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { duration: 2 } }}
             >
-              <span>React</span> portfolio
+              <span>React</span> portfolio.
             </motion.h2>
           </Hide>
-          <Hide>
+          {/* <Hide>
             <motion.h2
               variants={titleAnim}
               initial={{ opacity: 0 }}
@@ -46,12 +47,15 @@ const AboutSection = () => {
             >
               project.
             </motion.h2>
-          </Hide>
+          </Hide> */}
         </motion.div>
         <motion.p variants={fade}>
           This project shows some of my react skills!
         </motion.p>
-        <motion.button variants={fade}>View my Portfolio</motion.button>
+        <motion.button variants={fade}>
+          {/* Global Styles for links are white */}
+          <Link to='/contact'>Contact Me</Link>
+        </motion.button>
       </Description>
       <Image>
         <motion.img variants={photoAnim} src={home1} alt='fancy pastry' />

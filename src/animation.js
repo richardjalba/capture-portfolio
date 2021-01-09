@@ -36,6 +36,14 @@ export const fade = {
   },
 };
 
+export const line = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { ease: 'easeOut', duration: 2 },
+  },
+};
+
 export const photoAnim = {
   hidden: { scale: 1.5, opacity: 0 },
   show: {

@@ -38,6 +38,7 @@ const StyledNav = styled.nav`
     color: white;
     text-decoration: none;
   }
+
   ul {
     display: flex;
     list-style: none;
