@@ -2,6 +2,7 @@ import { React } from 'react';
 import styled from 'styled-components';
 import { Basic } from '../styles';
 import Toggle from './Toggle';
+import { AnimateSharedLayout } from 'framer-motion';
 
 const FaqSection = () => {
   // const [faqToggle, setFaqToggle] = useState(false);
@@ -11,9 +12,8 @@ const FaqSection = () => {
       <h2>
         Frequently Asked<span>Questions</span>
       </h2>
-      <Toggle>
-        <div className='question'>
-          <h4>Why did you get into programming?</h4>
+      <AnimateSharedLayout>
+        <Toggle title='Why did you get into programming?'>
           <div className='answer'>
             <p>
               Originally I worked in sales, but I knew this wasn't something I
@@ -24,13 +24,9 @@ const FaqSection = () => {
               So I went online and found FreeCodeCamp and the rest is history.
             </p>
           </div>
-          <div className='faq-line'></div>
-        </div>
-      </Toggle>
+        </Toggle>
 
-      <Toggle>
-        <div className='question'>
-          <h4>How did you teach yourself to code?</h4>
+        <Toggle title='How did you teach yourself to code?'>
           <div className='answer'>
             <p>
               Originally I started at FreeCodeCamp, but when I got to JavaScript
@@ -41,35 +37,26 @@ const FaqSection = () => {
               how to learn and I went from there.
             </p>
           </div>
-          <div className='faq-line'></div>
-        </div>
-      </Toggle>
+        </Toggle>
 
-      <Toggle>
-        <div className='question'>
-          <h4>What's the roadmap you recommend for new programmers?</h4>
+        <Toggle title="What's the roadmap you recommend for new programmers?">
           <div className='answer'>
             <p>
               HTML and CSS, JavaScript Fundamentals, JavaScript DOM, Algorithms,
               Node with Express and MongoDB, React.
             </p>
           </div>
-          <div className='faq-line'></div>
-        </div>
-      </Toggle>
+        </Toggle>
 
-      <Toggle>
-        <div className='question'>
-          <h4>What do you plan on learning next?</h4>
+        <Toggle title='What do you plan on learning next?'>
           <div className='answer'>
             <p>
               It's obvious to me that VR is the future. So I'll be learning C#
               for Unity. We'll see what the future brings.
             </p>
           </div>
-          <div className='faq-line'></div>
-        </div>
-      </Toggle>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
